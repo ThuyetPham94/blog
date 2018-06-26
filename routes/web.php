@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::group(['middleware' => 'api', 'namespace' => 'Api', 'as' => 'api.'], function () {
+    Route::resource('products', 'ProductController', ['except' => ['create', 'edit']]);
+ });

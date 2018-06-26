@@ -1,33 +1,21 @@
-import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-import {HashRouter , Link} from 'react-router-dom';
-import RouterPath from '../routes/RouterPath';
+import React, { Component } from 'react';
 
 export default class Example extends Component {
     render() {
         return (
-            <HashRouter>
-                <div>
-                    <ul>
-                        <li>
-                            <Link to={'/'}>Home</Link>
-                        </li>
-                        <li>
-                            <Link to={'/topic'}>Topic</Link>
-                        </li>
-                        <li>
-                            <Link to={'/about'}>About</Link>
-                        </li>
-                    </ul>
-                    <RouterPath/>
-                </div>
-            </HashRouter >
-        )
-    }
-}
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-8 col-md-offset-2">
+                        <div className="panel panel-default">
+                            <div className="panel-heading">Example Component</div>
 
-if (document.getElementById('example')) {
-    ReactDOM.render(
-        <Example/>,
-        document.getElementById('example'));
+                            <div className="panel-body">
+                                I am an example component!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 }
