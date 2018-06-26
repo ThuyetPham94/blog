@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {Route, Switch} from 'react-router-dom';
-import Home from '../views/Home';
-import Topic from '../views/Topic';
-import About from '../views/About';
+import Home from '../components/CreateItem';
+import Topic from '../components/Example';
+import About from '../components/Master';
 
 class RouterPath extends Component {
     render() {
