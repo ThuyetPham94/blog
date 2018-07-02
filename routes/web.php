@@ -15,5 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::group(['middleware' => 'api', 'namespace' => 'Api', 'as' => 'api.'], function () {
-    Route::resource('products', 'ProductController', ['except' => ['create', 'edit']]);
- });
+    // Route::resource('products', 'ProductController', ['except' => ['create', 'edit']]);
+    Route::resource('items', 'ItemController');
+});
+
+Route::group(['prefix' => 'api'], function () {
+    Route::resource('users', 'UserController');    
+});
